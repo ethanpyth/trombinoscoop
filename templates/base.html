@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <title>
+        Trombinoscoop - {% block title %}Bienvenu{% endblock %}
+    </title>
+</head>
+<body id="{% block bodyId %}genericPage{% endblock %}">
+    <header>
+        {% block headerContent %}{% endblock %}
+    </header>
+    <section id="Content">
+        {% block content %}{% endblock %}
+    </section>
+</body>
+</html>
