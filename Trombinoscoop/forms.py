@@ -1,4 +1,5 @@
 from django import forms
+from Trombinoscoop.models import Person, Student, Employee
 
 
 class LoginForm(forms.Form):
@@ -11,6 +12,33 @@ class LoginForm(forms.Form):
         password = cleaned_data.get("password")
 
         if email and password:
-            if password != 'sesame' or email != 'pierre@lxs.be':
+            result = Person.objects.filter(password=password, email=email)
+            if len(result) != 1:
                 raise forms.ValidationError("Adresse de courriel ou mot de passe érroné")
-            return cleaned_data
+        return cleaned_data
+
+
+class StudentProfileForm(forms.ModelForm):
+    class Meta:
+        model = Student
+        exclude = ('friends',)
+
+
+class EmployeeProfileForm(forms.ModelForm):
+    class Meta:
+        model = Employee
+        exclude = ('friends', )
+
+
+class AddFriendForm(forms.Form):
+    email = forms.EmailField(label='Courriel :')
+    def clean(self):
+        cleaned_data = super(AddFriend, self).clean()
+        email = cleaned_data.get('email')
+
+        if email:
+            result = Person.objects.filter(email=email)
+            if len(result) != 1:
+                raise forms.ValidationError("Adresse de courriel erronée.")
+
+        return cleaned_data
