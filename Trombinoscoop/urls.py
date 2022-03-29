@@ -24,5 +24,9 @@ urlpatterns = [
     path('login/', views.login),
     path('addFriend/', views.add_friend),
     path('showProfile', views.show_profile),
+    path('modifyProfile', views.modify_profile),
+    path('ajax/checkEmailField', views.ajax_check_email_field),
+    path('ajax/checkEmaField', views.ajax_check_email_field),
+    path('ajax/addFriend', views.ajax_add_friend),
     path('register/', views.register)
 ]

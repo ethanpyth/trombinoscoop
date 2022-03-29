@@ -54,14 +54,6 @@ ul.errorlist{
     padding: 0;
     list-style-type: none;
 }
-body#loginPage section#Content{
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    width: 500px;
-    margin: 0 0 0 -250px;
-    padding: 0;
-}
 body section#content{
     position: absolute;
     top: 110px;
@@ -82,6 +74,7 @@ h1{
     border-bottom: 1px solid #3b5998;
 }
 body#welcomePage header{
+    display: block;
     background: #3b5998 url('../img/shortLogo.png') no-repeat 20px 25px;
     color: #ffffff;
 }
@@ -112,13 +105,16 @@ body#welcomePage section#content{
     margin: 0 0 0 -400px;
 }
 body#welcomePage section#messageList{
+    display: block;
     position: absolute;
+    top: 60px;
     width: 600px;
     background-color: red;
 }
 body#welcomePage section#friendList{
     position: absolute;
     width: 180px;
+    top: 60px;
     right: 0;
     padding: 10px;
     background-color: #dce0ed;
@@ -171,4 +167,11 @@ dl.fieldList dd{
 }
 p#showProfileNavigationButtons{
     margin: 20px 0 0 260px;
+}
+#friendList form.inlineForm input[type="email"]{
+    display: inline-block;
+    width: 75px;
+}
+#friendList form.inlineForm input[type="submit"]{
+    display: inline-block;
 }

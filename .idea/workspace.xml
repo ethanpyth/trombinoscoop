@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11470e45-bba2-4cad-b037-569c4e8f0ea4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Trombinoscoop/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_friend.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/modify_profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/show_profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/319a16ac-bae6-4cba-9c97-a968edc3d97f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/319a16ac-bae6-4cba-9c97-a968edc3d97f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/886be0b4-a32c-44e5-bc39-037e296b834d.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trombinoscoop/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trombinoscoop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Trombinoscoop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Trombinoscoop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Trombinoscoop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/modify_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modify_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/welcome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Trombinoscoop/static/img" />
+    <property name="last_opened_file_path" value="$USER_HOME$/mes_projets_django/crepes_bretonnes" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="MTCustomThemeConfigurable" />
   </component>
@@ -113,6 +104,13 @@
       <workItem from="1647931927759" duration="7201000" />
       <workItem from="1647945747526" duration="3982000" />
       <workItem from="1647964553559" duration="329000" />
+      <workItem from="1647965233001" duration="461000" />
+      <workItem from="1647968942005" duration="2669000" />
+      <workItem from="1648021119965" duration="1241000" />
+      <workItem from="1648025153280" duration="2991000" />
+      <workItem from="1648034328743" duration="1746000" />
+      <workItem from="1648406844743" duration="55000" />
+      <workItem from="1648584715884" duration="1142000" />
     </task>
     <servers />
   </component>
