@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Person(models.Model):
+    img_profile = models.ImageField(default=None, null=True)
     registration_number = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     first_name = models.CharField(max_length=30)
@@ -10,7 +11,7 @@ class Person(models.Model):
     home_phone_number = models.CharField(max_length=20)
     cellphone_number = models.CharField(max_length=20)
     password = models.CharField(max_length=32)
-    friends = models.ManyToManyField('self')
+    friends = models.ManyToManyField('self', null=True)
     faculty = models.ForeignKey('Faculty', on_delete=models.CASCADE, default=None)
     person_type = 'generic'
 
@@ -21,7 +22,7 @@ class Person(models.Model):
 class Message(models.Model):
     author = models.ForeignKey('Person', on_delete=models.CASCADE, default=None)
     content = models.TextField()
-    publication_date = models.DateField()
+    publication_date = models.DateField(auto_now=False, auto_now_add=True)
 
     def __str__(self):
         if len(self.content) > 20:
@@ -71,3 +72,27 @@ class Student(Person):
     cursus = models.ForeignKey('Cursus', on_delete=models.CASCADE, default=None)
     year = models.IntegerField()
     person_type = 'student'
+
+
+class Publication(models.Model):
+    nb_like = models.IntegerField()
+    comment = models.CharField(max_length=255)
+    nb_sharing = models.IntegerField()
+    author_fk = models.ForeignKey('Person', on_delete=models.CASCADE, default=None)
+    content_fk = models.ForeignKey('Content_pub', on_delete=models.CASCADE, default=None)
+    date = models.DateField()
+
+
+class Content_pub(models.Model):
+    text = models.TextField()
+    img = models.ImageField()
+    videos_path = models.CharField(max_length=255)
+
+
+class Notifications(models.Model):
+    state = models.CharField(max_length=10)
+    type = models.CharField(max_length=5)
+    content = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.content
