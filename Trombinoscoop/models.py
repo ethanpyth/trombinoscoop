@@ -2,16 +2,16 @@ from django.db import models
 
 
 class Person(models.Model):
-    img_profile = models.ImageField(default=None, null=True)
+    img_profile = models.ImageField(default=None, null=True, blank=True)
     registration_number = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     first_name = models.CharField(max_length=30)
-    birth_date = models.DateField()
+    birth_date = models.DateField(blank=True)
     email = models.EmailField()
-    home_phone_number = models.CharField(max_length=20)
-    cellphone_number = models.CharField(max_length=20)
+    home_phone_number = models.CharField(max_length=20, blank=True)
+    cellphone_number = models.CharField(max_length=20, blank=True)
     password = models.CharField(max_length=32)
-    friends = models.ManyToManyField('self', null=True)
+    friends = models.ManyToManyField('self', null=True, blank=True)
     faculty = models.ForeignKey('Faculty', on_delete=models.CASCADE, default=None)
     person_type = 'generic'
 
@@ -84,9 +84,9 @@ class Publication(models.Model):
 
 
 class Content_pub(models.Model):
-    text = models.TextField()
-    img = models.ImageField()
-    videos_path = models.CharField(max_length=255)
+    text = models.TextField(blank=True)
+    img = models.ImageField(blank=True)
+    videos_path = models.CharField(max_length=255, blank=True)
 
 
 class Notifications(models.Model):

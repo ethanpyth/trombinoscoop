@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11470e45-bba2-4cad-b037-569c4e8f0ea4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0002_alter_person_friends.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Trombinoscoop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Trombinoscoop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0003_alter_content_pub_img_alter_content_pub_text_and_more.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/319a16ac-bae6-4cba-9c97-a968edc3d97f.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f2b36687-d2e8-4b05-8a31-b0dc5605afbc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f2b36687-d2e8-4b05-8a31-b0dc5605afbc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trombinoscoop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trombinoscoop/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Trombinoscoop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trombinoscoop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
@@ -114,7 +109,9 @@
       <workItem from="1648406844743" duration="55000" />
       <workItem from="1648584715884" duration="2510000" />
       <workItem from="1648631652872" duration="1667000" />
-      <workItem from="1648669946981" duration="6126000" />
+      <workItem from="1648669946981" duration="6228000" />
+      <workItem from="1648765882285" duration="1993000" />
+      <workItem from="1648847572083" duration="269000" />
     </task>
     <servers />
   </component>
