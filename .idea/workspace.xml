@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11470e45-bba2-4cad-b037-569c4e8f0ea4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0003_alter_content_pub_img_alter_content_pub_text_and_more.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/319a16ac-bae6-4cba-9c97-a968edc3d97f.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f2b36687-d2e8-4b05-8a31-b0dc5605afbc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f2b36687-d2e8-4b05-8a31-b0dc5605afbc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0004_remove_publication_content_fk_publication_img_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0005_alter_person_friends.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trombinoscoop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Trombinoscoop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trombinoscoop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/welcome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +113,12 @@
       <workItem from="1648631652872" duration="1667000" />
       <workItem from="1648669946981" duration="6228000" />
       <workItem from="1648765882285" duration="1993000" />
-      <workItem from="1648847572083" duration="269000" />
+      <workItem from="1648847572083" duration="2507000" />
+      <workItem from="1648894883558" duration="1587000" />
+      <workItem from="1648897208712" duration="514000" />
+      <workItem from="1648904316140" duration="1001000" />
+      <workItem from="1648920330141" duration="295000" />
+      <workItem from="1649012753211" duration="639000" />
     </task>
     <servers />
   </component>

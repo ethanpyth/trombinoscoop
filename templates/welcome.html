@@ -5,30 +5,59 @@
 {% block bodyId %}welcomePage{% endblock %}
 
 {% block headerContent %}
-    <p id="name">{{ logged_user.first_name }} {{ logged_user.last_name }}</p>
-    <p id="function">
-        {% if logged_user.person_type == 'student' %}
-            Etudiant en
-            {% if logged_user.year == 1 %}
-                {{ logged_user.year }}ère
-            {% else %}
-                {{ logged_user.year }}ème
-            {% endif %}
-            {{ logged_user.cursus.title }}
-        {% else %}
-            {{ logged_user.job.title|capfirst }}
-            dans la faculté {{ logged_user.faculty }}
-        {% endif %}
-    </p>
-    <p id="profileLinks">
-        <a href="showProfile?userToShow={{ logged_user.id }}" class="buttonLink">Voir le profil</a>
-        <a href="modifyProfile" class="buttonLink">Modifier le profil</a>
-    </p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">    
+                <p class="text-dark text-uppercase text-start fw-bold">{{ logged_user.first_name }} {{ logged_user.last_name }}</p>
+                <p class="text-dark text-start">
+                    {% if logged_user.person_type == 'student' %}
+                        Etudiant en
+                        {% if logged_user.year == 1 %}
+                            {{ logged_user.year }}ère
+                        {% else %}
+                            {{ logged_user.year }}ème
+                        {% endif %}
+                        {{ logged_user.cursus.title }}
+                    {% else %}
+                        {{ logged_user.job.title|capfirst }}
+                        dans la faculté {{ logged_user.faculty }}
+                    {% endif %}
+                </p>
+            </div>
+            <div class="col-6 text-end align-items-center mt-2">
+                <a href="showProfile?userToShow={{ logged_user.id }}" class="btn btn-primary">Voir le profil</a>
+                <a href="modifyProfile" class="btn btn-primary">Modifier le profil</a>
+            </div>
+        </div>
+        <div class="navbar bg-light">
+            <div class="container justify-content-evenly">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="" class="nav-link active" aria-current="page">Fil d'actualité</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Listes d'amis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Profil</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block content %}
-    <p>{{ logged_user.first_name }}{{ logged_user.last_name }}, bienvenue sur Trombinoscoop !</p>
-    <section id="messageList">
+    {% for champ in pub %}
+        <div class="container">
+
+        </div>
+    {% endfor %}
+    <!-- <p>{{ logged_user.first_name }} {{ logged_user.last_name }}, bienvenue sur Trombinoscoop !</p> -->
+    <!-- <section>
         <form action="#" method="get" class="inlineForm">
             <label for="newMessageInput">Publier un message</label>
             <input type="text" name="newMessage" id="newMessageInput">
@@ -69,13 +98,11 @@
                     data: ({email: $fieldValue}),
                     type: 'GET',
                     success: function($data, $textStatus, $XMLHttpRequest){
-                        $('#friendLlist ul').prepend($data);
+                        $('#friendList ul').prepend($data);
                     },
                 }
             );
             return false;
         }
-    </script>
+    </script> -->
 {% endblock %}
-
-

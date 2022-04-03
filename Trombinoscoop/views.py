@@ -4,7 +4,7 @@ from django import forms
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from Trombinoscoop.forms import LoginForm, StudentProfileForm, EmployeeProfileForm, AddFriendForm
-from Trombinoscoop.models import Person, Student, Employee, Message
+from Trombinoscoop.models import Person, Student, Employee, Message, Publication
 
 
 def get_logged_user_from_request(request):
@@ -166,3 +166,8 @@ def ajax_add_friend(request):
                 html_to_return += new_friend.first_name + ' ' + new_friend.last_name
                 html_to_return += '</q></li>'
     return HttpResponse(html_to_return)
+
+
+def publications(request):
+    pub = Publication.objects.all()
+    return render(request, 'welcome.html', {'pub': pub})

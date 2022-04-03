@@ -4,24 +4,14 @@
     <meta charset="UTF-8">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    
     <title>
         Trombinoscoop - {% block title %}Bienvenue{% endblock %}
     </title>
 </head>
 <body id="{% block bodyId %}genericPage{% endblock %}">
     <header>
-        <nav class="navbar navbar-light bg-light">
-            <div class="container">
-                {% block headerContent %}
-                <div class="row">
-                    <div class="text-dark text-start">  
-                        TROMBINOSCOOP
-                    </div>
-                </div>
-                {% endblock %}
-            </div>
-        </nav>
+        {% block headerContent %}{% endblock %}
     </header>
     <section id="Content">
         {% block content %}{% endblock %}

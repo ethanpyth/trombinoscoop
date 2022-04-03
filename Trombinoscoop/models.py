@@ -11,7 +11,7 @@ class Person(models.Model):
     home_phone_number = models.CharField(max_length=20, blank=True)
     cellphone_number = models.CharField(max_length=20, blank=True)
     password = models.CharField(max_length=32)
-    friends = models.ManyToManyField('self', null=True, blank=True)
+    friends = models.ManyToManyField('self', blank=True)
     faculty = models.ForeignKey('Faculty', on_delete=models.CASCADE, default=None)
     person_type = 'generic'
 
@@ -76,17 +76,15 @@ class Student(Person):
 
 class Publication(models.Model):
     nb_like = models.IntegerField()
-    comment = models.CharField(max_length=255)
     nb_sharing = models.IntegerField()
-    author_fk = models.ForeignKey('Person', on_delete=models.CASCADE, default=None)
-    content_fk = models.ForeignKey('Content_pub', on_delete=models.CASCADE, default=None)
-    date = models.DateField()
-
-
-class Content_pub(models.Model):
+    date = models.DateField(auto_now=False, auto_now_add=True)
     text = models.TextField(blank=True)
     img = models.ImageField(blank=True)
     videos_path = models.CharField(max_length=255, blank=True)
+    author_fk = models.ForeignKey('Person', on_delete=models.CASCADE, default=None)
+
+    def __str__(self):
+        return self.text
 
 
 class Notifications(models.Model):
@@ -96,3 +94,11 @@ class Notifications(models.Model):
 
     def __str__(self):
         return self.content
+
+
+class Comment_pub(models.Model):
+    publication = models.OneToOneField('Publication', on_delete=models.CASCADE) #un publicqtions
+    comment = models.CharField(max_length=255)
+    author_fk = models.ForeignKey('Person', on_delete=models.CASCADE, default=None)
+    date = models.DateField(auto_now=False, auto_now_add=True)
+    comment_cm = models.ManyToManyField('self', blank=True) #un à plusieurs commentaires sur un seul commentaires
