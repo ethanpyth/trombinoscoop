@@ -1,6 +1,6 @@
 from django.contrib import admin
-from Trombinoscoop.models import Faculty, Campus, Cursus, Job, Employee, Student, Message, Notifications, Publication
-
+from Trombinoscoop.models import Faculty, Campus, Cursus, Job, Employee, Student, Message, Notifications, Publication, \
+    Comment_pub
 
 admin.site.register(Faculty)
 admin.site.register(Job)
@@ -11,3 +11,4 @@ admin.site.register(Student)
 admin.site.register(Employee)
 admin.site.register(Notifications)
 admin.site.register(Publication)
+admin.site.register(Comment_pub)

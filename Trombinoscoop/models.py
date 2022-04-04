@@ -75,13 +75,13 @@ class Student(Person):
 
 
 class Publication(models.Model):
-    nb_like = models.IntegerField()
-    nb_sharing = models.IntegerField()
+    nb_like = models.IntegerField(blank=True, null=True)
+    nb_sharing = models.IntegerField(blank=True, null=True)
     date = models.DateField(auto_now=False, auto_now_add=True)
     text = models.TextField(blank=True)
     img = models.ImageField(blank=True)
     videos_path = models.CharField(max_length=255, blank=True)
-    author_fk = models.ForeignKey('Person', on_delete=models.CASCADE, default=None)
+    author_fk = models.OneToOneField('Person', on_delete=models.CASCADE, default=None)
 
     def __str__(self):
         return self.text

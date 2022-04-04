@@ -7,7 +7,7 @@
 {% block headerContent %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-6">    
+            <div class="col-6">
                 <p class="text-dark text-uppercase text-start fw-bold">{{ logged_user.first_name }} {{ logged_user.last_name }}</p>
                 <p class="text-dark text-start">
                     {% if logged_user.person_type == 'student' %}
@@ -51,11 +51,18 @@
 {% endblock %}
 
 {% block content %}
-    {% for champ in pub %}
-        <div class="container">
-
+<div class="container">
+    {% for field in pub %}
+        <div class="row">
+            <div class="col-2">
+                <div class="bg-secondary h-100 w-100"></div>
+            </div> 
+            <div class="col-10">
+                <p class="text-start">{{ field.author_fk.last_name }} {{ field.author_fk.first_name }}</p>
+            </div>
         </div>
     {% endfor %}
+</div>
     <!-- <p>{{ logged_user.first_name }} {{ logged_user.last_name }}, bienvenue sur Trombinoscoop !</p> -->
     <!-- <section>
         <form action="#" method="get" class="inlineForm">
