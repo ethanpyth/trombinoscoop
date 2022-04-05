@@ -1,8 +1,12 @@
 from django.db import models
 
 
+def user_directory_path(instance, filename):
+    return "user_{}/{}".format(instance.user.id, filename)
+
+
 class Person(models.Model):
-    img_profile = models.ImageField(default=None, null=True, blank=True)
+    img_profile = models.FileField(upload_to='profil_img/', default=None, null=True, blank=True)
     registration_number = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     first_name = models.CharField(max_length=30)
@@ -79,9 +83,9 @@ class Publication(models.Model):
     nb_sharing = models.IntegerField(blank=True, null=True)
     date = models.DateField(auto_now=False, auto_now_add=True)
     text = models.TextField(blank=True)
-    img = models.ImageField(blank=True)
-    videos_path = models.CharField(max_length=255, blank=True)
-    author_fk = models.OneToOneField('Person', on_delete=models.CASCADE, default=None)
+    img = models.FileField(upload_to=user_directory_path, blank=True)
+    videos_path = models.FileField(upload_to=user_directory_path, blank=True)
+    author_fk = models.ForeignKey('Person', on_delete=models.CASCADE, default=None)
 
     def __str__(self):
         return self.text

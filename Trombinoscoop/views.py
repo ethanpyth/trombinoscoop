@@ -164,7 +164,11 @@ def publications(request):
     if logged_user:
         # if 'newMessage' in request.GET and request.GET['newMessage'] != '': new_message = Message(
         # author=logged_user, content=request.GET['newMessage'], publication_date=date.today()) new_message.save()
-        pub = Publication.objects.filter(logged_user.friends).all()
+        pub = []
+        user = Person.objects.get(pk=logged_user.id)
+        for i in user.friends.all():
+            pub.append(Publication.objects.get(author_fk=i))
+
         # friend_messages = Message.objects.filter(author__friends=logged_user).order_by('-publication_date')
         return render(request, 'welcome.html', {'pub': pub, 'logged_user': logged_user})
     else:
