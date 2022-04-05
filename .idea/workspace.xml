@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11470e45-bba2-4cad-b037-569c4e8f0ea4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0006_remove_publication_comment_alter_publication_date_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0007_alter_publication_nb_like_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0008_alter_publication_nb_like_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0009_alter_publication_author_fk.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trombinoscoop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trombinoscoop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trombinoscoop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trombinoscoop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/welcome.html" afterDir="false" />
     </list>
@@ -121,7 +117,8 @@
       <workItem from="1649012753211" duration="1782000" />
       <workItem from="1649064550859" duration="924000" />
       <workItem from="1649066833021" duration="1746000" />
-      <workItem from="1649069494339" duration="1556000" />
+      <workItem from="1649069494339" duration="1850000" />
+      <workItem from="1649141624312" duration="4250000" />
     </task>
     <servers />
   </component>

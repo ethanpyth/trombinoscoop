@@ -20,16 +20,7 @@ def get_logged_user_from_request(request):
         return None
 
 
-def welcome(request):
-    logged_user = get_logged_user_from_request(request)
-    if logged_user:
-        if 'newMessage' in request.GET and request.GET['newMessage'] != '':
-            new_message = Message(author=logged_user, content=request.GET['newMessage'], publication_date=date.today())
-            new_message.save()
-        friend_messages = Message.objects.filter(author__friends=logged_user).order_by('-publication_date')
-        return render(request, 'welcome.html', {'logged_user': logged_user, 'friendMessages': friend_messages})
-    else:
-        return redirect('/login/')
+# def welcome(request):
 
 
 def login(request):
@@ -169,5 +160,12 @@ def ajax_add_friend(request):
 
 
 def publications(request):
-    pub = Publication.objects.all()
-    return render(request, 'welcome.html', {'pub': pub})
+    logged_user = get_logged_user_from_request(request)
+    if logged_user:
+        # if 'newMessage' in request.GET and request.GET['newMessage'] != '': new_message = Message(
+        # author=logged_user, content=request.GET['newMessage'], publication_date=date.today()) new_message.save()
+        pub = Publication.objects.filter(logged_user.friends).all()
+        # friend_messages = Message.objects.filter(author__friends=logged_user).order_by('-publication_date')
+        return render(request, 'welcome.html', {'pub': pub, 'logged_user': logged_user})
+    else:
+        return redirect('/login/')
