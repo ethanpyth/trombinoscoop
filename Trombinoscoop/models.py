@@ -7,14 +7,14 @@ def user_directory_path(instance, filename):
 
 class Person(models.Model):
     img_profile = models.FileField(upload_to='profil_img/', default=None, null=True, blank=True)
-    registration_number = models.CharField(max_length=30)
+    registration_number = models.CharField(max_length=30, unique=True)
     last_name = models.CharField(max_length=30)
     first_name = models.CharField(max_length=30)
     birth_date = models.DateField(blank=True)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     home_phone_number = models.CharField(max_length=20, blank=True)
-    cellphone_number = models.CharField(max_length=20, blank=True)
-    password = models.CharField(max_length=32)
+    cellphone_number = models.CharField(max_length=20, blank=True, unique=True)
+    password = models.CharField(max_length=32, unique=True)
     friends = models.ManyToManyField('self', blank=True)
     faculty = models.ForeignKey('Faculty', on_delete=models.CASCADE, default=None)
     person_type = 'generic'
