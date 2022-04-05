@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11470e45-bba2-4cad-b037-569c4e8f0ea4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Trombinoscoop/migrations/0013_alter_person_cellphone_number_alter_person_email_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profil_img/IMG_20201122_152357_492.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trombinoscoop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trombinoscoop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Trombinoscoop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="11470e45-bba2-4cad-b037-569c4e8f0ea4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,6 +115,7 @@
       <workItem from="1649141624312" duration="4250000" />
       <workItem from="1649152912941" duration="4317000" />
       <workItem from="1649184080525" duration="4931000" />
+      <workItem from="1649191960202" duration="284000" />
     </task>
     <servers />
   </component>
