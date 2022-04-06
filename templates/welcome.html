@@ -7,30 +7,29 @@
 {% block headerContent %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-6">
+        </div>
+        <div class="navbar bg-light mb-3">
+            <div class="col-1">
+                <img class="" src="{{ logged_user.img_profile }}" alt="Photo de profil">
+            </div>
+            <div class="col-3">
                 <p class="text-dark text-uppercase text-start fw-bold">{{ logged_user.first_name }} {{ logged_user.last_name }}</p>
                 <p class="text-dark text-start">
                     {% if logged_user.person_type == 'student' %}
-                        Etudiant en
-                        {% if logged_user.year == 1 %}
-                            {{ logged_user.year }}ère
-                        {% else %}
-                            {{ logged_user.year }}ème
-                        {% endif %}
-                        {{ logged_user.cursus.title }}
+                    Etudiant en
+                    {% if logged_user.year == 1 %}
+                    {{ logged_user.year }}ère
                     {% else %}
-                        {{ logged_user.job.title|capfirst }}
-                        dans la faculté {{ logged_user.faculty }}
+                    {{ logged_user.year }}ème
+                    {% endif %}
+                    {{ logged_user.cursus.title }}
+                    {% else %}
+                    {{ logged_user.job.title|capfirst }}
+                    dans la faculté {{ logged_user.faculty }}
                     {% endif %}
                 </p>
             </div>
-            <div class="col-6 text-end align-items-center mt-2">
-                <a href="showProfile?userToShow={{ logged_user.id }}" class="btn btn-primary">Voir le profil</a>
-                <a href="modifyProfile" class="btn btn-primary">Modifier le profil</a>
-            </div>
-        </div>
-        <div class="navbar bg-light">
-            <div class="container justify-content-evenly">
+            <div class="col-4 justify-content-evenly">
                 <ul class="nav">
                     <li class="nav-item">
                         <a href="" class="nav-link active" aria-current="page">Fil d'actualité</a>
@@ -46,43 +45,59 @@
                     </li>
                 </ul>
             </div>
+            <div class="col-4 text-end align-items-center mt-2">
+                <a href="showProfile?userToShow={{ logged_user.id }}" class="btn btn-primary">Voir le profil</a>
+                <a href="modifyProfile" class="btn btn-primary">Modifier le profil</a>
+            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-    {% for field in pub %}
-        <div class="container mb-2">
-            <div class="row">
-                <div class="col-2">
-                    <div class="bg-secondary h-100 w-100"></div>
-                </div> 
-                <div class="col-10">
-                    <p class="text-start">{{ field.author_fk.last_name }} {{ field.author_fk.first_name }}</p>
-                </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <p class="text-center">Menu</p>
             </div>
-            {% if field.text %}
-                <p>{{ field.text }}</p>
-            {% endif %}
-            {% if field.img %}
-                <i src="{{ field.img }}">{{ field.img }}</i>
-            {% endif %}
-{#            <!-- {% if field.video %}#}
-{#                <p>{{ field.text }}</>#}
-{#            {% endif %} -->#}
-            <div class="row">
-                <div class="col-4">
-                    <p class="text-center">Likez</p>
-                </div>
-                <div class="col-4">
-                    <p class="text-center">Commentez</p>
-                </div>
-                <div class="col-4">
-                    <p class="text-center">Partagez</p>
-                </div>
+            <div class="col">
+                {% for field in pub %}
+                    <div class="container mb-2 bg-light">
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="bg-secondary h-100 w-100"></div>
+                            </div> 
+                            <div class="col-10">
+                                <p class="text-start">{{ field.author_fk.last_name }} {{ field.author_fk.first_name }}</p>
+                            </div>
+                        </div>
+                        {% if field.text %}
+                            <p>{{ field.text }}</p>
+                        {% endif %}
+                        {% if field.img %}
+                            <i src="{{ field.img }}">{{ field.img }}</i>
+                        {% endif %}
+            {#            <!-- {% if field.video %}#}
+            {#                <p>{{ field.text }}</>#}
+            {#            {% endif %} -->#}
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="text-center">Likez</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="text-center">Commentez</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="text-center">Partagez</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-3">
+                <p class="text-center">Amis connecté</p>
             </div>
         </div>
-    {% endfor %}
+    </div>
     <!-- <p>{{ logged_user.first_name }} {{ logged_user.last_name }}, bienvenue sur Trombinoscoop !</p> -->
     <!-- <section>
         <form action="#" method="get" class="inlineForm">
